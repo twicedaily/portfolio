@@ -1,0 +1,993 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+ul,li {
+    list-style: none;
+}
+.cell {
+    float: left;
+}
+.cell-right {
+    float: right;
+}
+.row::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+/* -------------섹션 배경색------------------ */
+.section1 {
+    background-color: #B2C7D3;
+    overflow: hidden;
+}
+.section4 {
+    background-color: #E1F4F3;
+}
+/* -----------------탑메뉴------------------------ */
+.nav-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+}
+.nav-wrap>.nav-wrap2 {
+    width: 1200px;
+    position: relative;
+    margin: 0 auto;
+    height: 100px;
+}
+.nav-wrap>.nav-wrap2>p {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-family: 'Style Script', cursive;
+    font-size: 50px;
+}
+.nav-wrap>.nav-wrap2>ul {
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+.nav-wrap>.nav-wrap2>ul>li {
+    width: 22%;
+    text-align: center;
+    margin-right: 4%;
+}
+.nav-wrap>.nav-wrap2>ul>li:nth-child(4) {
+    margin-right: 0;
+}
+.nav-wrap>.nav-wrap2>ul>li>a {
+    background-color: white;
+    line-height: 40px;
+    border-radius: 50px;
+    display: block;
+    transition: 1s;
+    box-shadow: 5px 5px 5px black;
+}
+.nav-wrap>.nav-wrap2>ul>li>a:hover {
+    color: #ffffff;
+    background-color: #656677;
+}
+/* --------------섹션1 구름--------------------- */
+.section1 .img-box {
+    width: 100%;
+    height: 100%;
+}
+.section1 .img-box>img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.section1 .img-box>img:nth-child(1) {
+    z-index: 99;
+}
+.section1 .img-box>img:nth-child(2) {
+    bottom: -200px;
+}
+.section1 .img-box>img:nth-child(3) {
+    top: -350px;
+    left: -550px;
+}
+.section1 .img-box>img:nth-child(4) {
+    top: -400px;
+    right: -1300px;
+    z-index: 999;
+    width: 120%;
+    height: 120%;
+}
+.section1 .img-box>img:nth-child(5) {
+    z-index: 999;
+    top: 227px;
+    left: 112px;
+    width: 70%;
+    height: 70%;
+}
+.section1 .img-box>img:nth-child(6) {
+    z-index: 999;
+    top: 232px;
+    left: -71px;
+    width: 80%;
+    height: 80%;
+}
+@keyframes aaa {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(130%);
+    }
+}
+@keyframes bbb {
+    0% {
+        transform: translateX(-150%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+.c1 {
+    animation-name: aaa;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.c2 {
+    animation-name: bbb;
+    animation-duration: 18s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.c3 {
+    animation-name: aaa;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.c4 {
+    animation-name: aaa;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+/* --------------섹션1 문구--------------------- */
+.section1 .text-box .p1 {
+    position: absolute;
+    top: 50%;
+    left: -50%;
+    transform: translate(-50%,-50%);
+    font-size: 155px;
+    z-index: 990;
+    color: #005694;
+    font-family: 'Fugaz One', cursive;
+    -webkit-text-stroke:11px white;
+    transition: 3s;
+}
+.section1 .text-box .p1.active {
+    left: 50%;
+}
+.section1 .text-box .p2 {
+    position: absolute;
+    top: 35%;
+    right: -10%;
+    font-size: 50px;
+    z-index: 990;
+    color: #005694;
+    font-family: 'Fugaz One', cursive;
+    -webkit-text-stroke: 1px white;
+    transition: 3s;
+}
+.section1 .text-box .p2.active {
+    right: 27%;
+}
+.section1 .text-box .p3 {
+    position: absolute;
+    bottom: -22%;
+    left: 72%;
+    font-size: 23px;
+    line-height: 23px;
+    z-index: 990;
+    color: #005694;
+    font-family: 'Fugaz One', cursive;
+    -webkit-text-stroke: 1px white;
+    text-align: center;
+    transition: 3s;
+}
+.section1 .text-box .p3.active {
+    bottom: 36.5%;
+}
+.section1 .text-box .p4 {
+    position: absolute;
+    top: 57%;
+    left: -35%;
+    font-size: 71px;
+    z-index: 990;
+    color: #005694;
+    -webkit-text-stroke: 1px white;
+    letter-spacing: -6px;
+    z-index: 999;
+    font-family: 'Nanum Pen Script', cursive;
+    transition: 3s;
+}
+.section1 .text-box .p4.active {
+    left: 37%;
+}
+/* -----------------섹션2뒷배경 로테이트----- */
+.section2 {
+    overflow: hidden;
+}
+.section2 .background-box>.rotate-box1 {
+    width: 200%;
+    height: 200%;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: -135%;
+    transform: rotate(-36deg);
+}
+.section2 .background-box>.rotate-box2 {
+    width: 200%;
+    height: 200%;
+    background-color: #E1F4F3;
+    position: absolute;
+    top: -155%;
+    right: -210%;
+    transform: rotate(-36deg);
+    transition: 2s;
+}
+.section2 .background-box>.rotate-box2.active {
+    right: -136%;
+}
+/* 이거쓴다하면 rotate-box에 cell주고 row도 줘야함
+ .section2 {
+    overflow: hidden;
+    position: relative;
+}
+.section2 .background-box {
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-36deg);
+}
+.section2 .background-box>.rotate-box1 {
+    background-color: red;
+    width: 50%;
+    height: 100%;
+}
+.section2 .background-box>.rotate-box2 {
+    background-color: #E1F4F3;
+    width: 50%;
+    height: 100%;
+} */
+/* ---------------------섹션2소개글-------------- */
+.section2 .introduce-box {
+    position: absolute;
+    top: 267px;
+    left: 80px;
+}
+.section2 .introduce-box>.cell-box1 {
+    width: 100%;
+}
+.section2 .introduce-box>.cell-box1>.my-photo {
+    width: 183px;
+    height: 236px;
+    background-color: #dddddd;
+}
+.section2 .introduce-box>.cell-box1>.text-box {
+    margin-left: 40px;
+    margin-top: 28px;
+}
+.section2 .introduce-box>.cell-box1>.text-box>p {
+    font-size: 18px;
+}
+.section2 .introduce-box>.cell-box1>.text-box>.txt1 {
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+.section2 .introduce-box>.cell-box1>.text-box>.txt1::before {
+    display: block;
+    content: "";
+    width: 85px;
+    height: 3px;
+    background-color: #2893F6;
+    position: absolute;
+    top: 62px;
+}
+.section2 .introduce-box>.cell-box1>.text-box>.txt2 {
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+.section2 .introduce-box>.cell-box1>.text-box>.txt2::before {
+    display: block;
+    content: "";
+    width: 145px;
+    height: 3px;
+    background-color: #2893F6;
+    position: absolute;
+    top: 198px;
+}
+.section2 .introduce-box>.cell-box1>.text-box>p:nth-child(4) {
+    margin-bottom: 24px;
+}
+
+.section2 .introduce-box>.cell-box2 {
+    width: 100%;
+}
+.section2 .introduce-box>.cell-box2>.tool-box {
+    width: 100%;
+    margin-top: 85px;
+}
+.section2 .introduce-box>.cell-box2>.tool-box>p {
+    font-size: 24px;
+    line-height: 25px;
+    text-align: center;
+    margin-right: 15px;
+}
+.section2 .introduce-box>.cell-box2>.tool-box>p::before {
+    display: block;
+    content: "";
+    width: 3px;
+    height: 101px;
+    background-color: #2893F6;
+    position: absolute;
+    left: 33px;
+}
+/* --------인적사항이벤트적용하기------- */
+.section2 .introduce-box>.cell-box1>.text-box>.translatey1 {
+    transform: translateY(30px);
+    opacity: 0;
+    transition: 1s;
+    transition-delay: 0.3s;
+}
+.section2 .introduce-box>.cell-box1>.text-box>.translatey2 {
+    transform: translateY(30px);
+    opacity: 0;
+    transition: 1s;
+    transition-delay: 0.6s;
+}
+.section2 .introduce-box>.cell-box1>.text-box>.translatey3 {
+    transform: translateY(30px);
+    opacity: 0;
+    transition: 1s;
+    transition-delay: 0.9s;
+}
+.section2 .introduce-box>.cell-box1>.text-box>.translatey4 {
+    transform: translateY(30px);
+    opacity: 0;
+    transition: 1s;
+    transition-delay: 1.2s;
+}
+.section2 .introduce-box>.cell-box1>.text-box>.translatey1.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+.section2 .introduce-box>.cell-box1>.text-box>.translatey2.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+.section2 .introduce-box>.cell-box1>.text-box>.translatey3.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+.section2 .introduce-box>.cell-box1>.text-box>.translatey4.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+/*기존 css
+ .section2 .introduce-box>.cell-box2>.tool-box>.tool-img-box {
+    margin-top: 5px;
+} */
+/* -------------------섹션2 이미지박스툴-------------------------------- */
+.section2 .introduce-box>.cell-box2>.tool-box>.overflow-box {
+    overflow: hidden;
+    width: 620px;
+}
+.section2 .introduce-box>.cell-box2>.tool-box>.overflow-box>.tool-img-box {
+    width: 620px;
+    transform: translateX(-120%);
+    transition: 1s;
+}
+.section2 .introduce-box>.cell-box2>.tool-box>.overflow-box>.tool-img-box.active {
+    transform: translateX(10px);
+}
+/* .section2 .introduce-box>.cell-box2>.tool-box>.tool-img-box {
+    position: absolute;
+    left: -120%;
+    width: 620px;
+    transition: 1s;
+} */
+/* .section2 .introduce-box>.cell-box2>.tool-box>.tool-img-box.active {
+    left: 50px;
+} */
+ .section2 .introduce-box>.cell-box2>.tool-box .tool-img-box>img {
+    width: 90px;
+    height: 90px;
+    margin-right: 16px;
+}
+.section2 .introduce-box>.cell-box2>.tool-box .tool-img-box>img:nth-child(2) {
+    width: 63px;
+}
+/* ------섹션2 포토샵이미지-------------*/
+.section2 .photoshop-img-box>img:nth-child(1) {
+    position: absolute;
+    width: 350px;
+    height: 233px;
+    top: 160px;
+    right: 350px;
+    transform: rotate(-10deg);
+    z-index: 50;
+}
+.section2 .photoshop-img-box>img:nth-child(2) {
+    position: absolute;
+    width: 350px;
+    height: 233px;
+    top: 260px;
+    right: 70px;
+    transform: rotate(20deg);
+    z-index: 22;
+}
+.section2 .photoshop-img-box>img:nth-child(3) {
+    position: absolute;
+    width: 250px;
+    height: 375px;
+    top: 440px;
+    right: 225px;
+    z-index: 30;
+    transform: rotate(-20deg);
+}
+
+
+
+
+
+
+
+/* ----------섹션2  문구 애니메이션-----------*/
+.ani-wrap {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform: rotate(54deg);
+}
+.ani-wrap>.ani-list-wrap {
+    width: 12560px;
+}
+.ani-wrap>.ani-list-wrap>.ani-list {
+    width: 6280px;
+}
+.ani-wrap>.ani-list-wrap>.ani-list>.ani-box {
+    width: 1500px;
+    margin-right: 70px;
+}
+.ani-wrap>.ani-list-wrap>.ani-list>.ani-box>img {
+    width: 100%;
+}
+.animation {
+    animation-name: test;
+    animation-duration: 50s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+}
+@keyframes test {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------섹션3------------------ */
+.section3 .slick-wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+.section3 .slick-wrap .slick-list {
+    overflow: visible;
+}
+.section3 .slick-wrap .slick-slide>div {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.section3 .slick-wrap .slick-content .site-box {
+    width: 100%;
+    position: relative;
+}
+.section3 .slick-wrap .slick-content .hover-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 0;
+    transition: 1s;
+}
+.section3 .slick-wrap .slick-content .hover-box:hover {
+    opacity: 1;
+}
+.section3 .slick-wrap .slick-content .hover-box>a {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    border-radius: 50px;
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    text-align: center;
+    line-height: 30px;
+    margin-top: 200px;
+    transition: 1s;
+}
+.section3 .slick-wrap .slick-content .hover-box>a:nth-child(2) {
+    margin-top: 30px;
+}
+.section3 .slick-wrap .slick-content .hover-box>a:hover {
+    background-color: ghostwhite;
+    color: black;
+}
+.section3 .slick-wrap .slick-content .hover-box>p {
+    text-align: center;
+    color: white;
+    margin-top: 30px;
+    font-weight: bold;
+}
+.section3 .slick-wrap .slick-content img {
+    width: 100%;
+}
+.section3 .slick-wrap .slick-content>p {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 24px;
+}
+
+/* ----------섹션3 슬릭버튼-------------- */
+.slick-dots li button::before {
+    font-size: 60px;
+}
+/* ------------------섹션3 화살표------------------ */
+.arrow-left-box {
+    position: absolute;
+    bottom: 128px;
+    height: 20px;
+    left: 42%;
+    cursor: pointer;
+    z-index: 999;
+    bottom: 125px;
+}
+.arrow-btn {
+    width: 80px;
+    height: 3px;
+    background-color: black;
+    margin-top: 8px;
+}
+.arrow-btn::before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    top: 50%;
+    transform: translatey(-50%) rotate(-135deg);
+}
+
+.arrow-right-box {
+    position: absolute;
+    height: 20px;
+    right: 42%;
+    cursor: pointer;
+    z-index: 999;
+    bottom: 125px;
+}
+.arrow-btn2 {
+    width: 80px;
+    height: 3px;
+    background-color: black;
+    margin-top: 8px;
+}
+.arrow-btn2::before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    right: 0;
+    top: 50%;
+    transform: translatey(-50%) rotate(-315deg);
+}
+
+
+
+
+
+
+
+
+
+.section4 {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* -------------섹션4 가운데 도형---------------- */
+.section4 .center-box {
+    width: 100%;
+    height: 100%;
+}
+/* .section4 .center-box>.square1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(45deg);
+    width: 420px;
+    height: 420px;
+    background-color: #46618A;
+} */
+.section4 .center-box>.square1 {
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    background-color: #46618A;
+}
+.rotatea {
+    animation-name: rotate1;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes rotate1 {
+    0% {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%) rotate(-45deg);
+    }
+    100% {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%) rotate(45deg);
+    }
+}
+/* .section4 .center-box>.square2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 420px;
+    height: 420px;
+    background-color: #B2C7D3;
+} */
+.section4 .center-box>.square2 {
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    background-color: #B2C7D3;
+}
+.rotateb {
+    animation-name: rotate2;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes rotate2 {
+    0% {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+    100% {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%) rotate(90deg);
+    }
+}
+.section4 .center-box>.circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 365px;
+    height: 365px;
+    border-radius: 50%;
+    background-color: white;
+    border: 12px solid black;
+}
+.section4 .center-box>.circle>p {
+    text-align: center;
+}
+.section4 .center-box>.circle>p:nth-child(1) {
+    font-size: 64px;
+    margin-top: 55px;
+}
+.section4 .center-box>.circle>p:nth-child(2) {
+    font-size: 18px;
+    margin-top: 26px;
+}
+.section4 .center-box>.circle>p:nth-child(3) {
+    font-size: 18px;
+    margin-top: 10px;
+}
+.section4 .center-box>.circle>p:nth-child(4) {
+    font-size: 24px;
+    margin-top: 55px;
+}
+/* -------------섹션4 테두리 화살표---------------- */
+.section4 .arrow-box {
+    width: 100%;
+    height: 100%;
+}
+/* --------------------↓-----------------------------*/   
+.section4 .arrow-box>img:nth-child(1) {
+    width: 550px;
+    position: absolute;
+}
+.a1-ani {
+    animation-name: a1;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes a1 {
+    0% {
+        left: 50%;
+        transform: translateX(-50%) rotate(90deg);
+        top: -400px;
+    }
+    100% {
+        left: 50%;
+        transform: translateX(-50%) rotate(90deg);
+        top: -120px;
+    }
+}
+/* ----------------------------↙---------------------------- */
+.section4 .arrow-box>img:nth-child(2) {
+    width: 550px;
+    position: absolute;
+}
+.a5-ani {
+    animation-name: a5;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes a5 {
+    0% {
+        transform:rotate(135deg);
+        top: -175px;
+        right: 30px;
+    }
+    100% {
+        transform:rotate(135deg);
+        top: 25px;
+        right: 230px;
+    }
+}
+/* ----------------------------←---------------------------- */
+.section4 .arrow-box>img:nth-child(3) {
+    width: 645px;
+    position: absolute;
+    top: 50%;
+    right: -30px;
+    transform: translateY(-50%) rotate(180deg);
+}
+.a3-ani {
+    animation-name: a3;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: reverse;
+}
+@keyframes a3 {
+    0% {
+        top: 50%;
+        transform: translateY(-50%) rotate(180deg);
+        right: -120px;
+    }
+    100% {
+        top: 50%;
+        transform: translateY(-50%) rotate(180deg);
+        right: -400px;
+    }
+}
+/* ----------------------------↖---------------------------- */
+.section4 .arrow-box>img:nth-child(4) {
+    width: 550px;
+    position: absolute;
+}
+.a6-ani {
+    animation-name: a6;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes a6 {
+    0% {
+        transform:rotate(225deg);
+        bottom: -175px;
+        right: 30px;
+    }
+    100% {
+        transform:rotate(225deg);
+        bottom: 25px;
+        right: 230px;
+    }
+}
+/* ----------------------------↑---------------------------- */
+.section4 .arrow-box>img:nth-child(5) {
+    width: 550px;
+    position: absolute;
+}
+.a2-ani {
+    animation-name: a2;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: reverse;
+}
+@keyframes a2 {
+    0% {
+        left: 50%;
+        transform: translateX(-50%) rotate(-90deg);
+        bottom: -120px;
+    }
+    100% {
+        left: 50%;
+        transform: translateX(-50%) rotate(-90deg);
+        bottom: -400px;
+    }
+}
+/* ----------------------------↗---------------------------- */
+.section4 .arrow-box>img:nth-child(6) {
+    width: 550px;
+    position: absolute;
+}
+.a7-ani {
+    animation-name: a7;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes a7 {
+    0% {
+        transform:rotate(315deg);
+        bottom: -175px;
+        left:30px ;
+    }
+    100% {
+        transform:rotate(315deg);
+        bottom: 25px;
+        left:230px ;
+    }
+}
+/* ----------------------------→---------------------------- */
+.section4 .arrow-box>img:nth-child(7) {
+    width: 645px;
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    transform: translateY(-50%) rotate(360deg);
+}
+.a4-ani {
+    animation-name: a4;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: reverse;
+}
+@keyframes a4 {
+    0% {
+        top: 50%;
+        transform: translateY(-50%) rotate(0deg);
+        left: -120px;
+    }
+    100% {
+        top: 50%;
+        transform: translateY(-50%) rotate(0deg);
+        left: -400px;
+    }
+}
+/* ----------------------------↘---------------------------- */
+.section4 .arrow-box>img:nth-child(8) {
+    width: 550px;
+    position: absolute;
+}
+.a8-ani {
+    animation-name: a8;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes a8 {
+    0% {
+        transform:rotate(45deg);
+        top: -175px;
+        left: 30px;
+    }
+    100% {
+        transform:rotate(45deg);
+        top: 25px;
+        left: 230px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+질문사항
+구름이 끊기지않고 이어지게 나오게하는법  ---섹션2와 마찬가지로 이미지를 두개이어서 만들어준다
+
+섹션1에 문구가 바로실행되지않고 2에서 1로갈때 실행됨---에프터랜더사용
+
+탑메뉴누를시 섹션으로 이동하는법 id값을지정해서하는거 맞나요?
+그리고 지정해서하면 풀페이지이벤트가 작동이안돼요
+눌렀을때 부드럽게 이동하는법------------------------무브투를 사용
+
+tool-box가 우측으로 이동할때 라인지나면 안보이던게 보이게----툴이미지박스에 오버플로우 히든을 주고 
+좌측으로 이동시키면 영역을 벗어났기때문에 자연스레 사라진다
+
+섹션4에 화살표 움직이는거 일일이 위치확인?-------확인하며 작업해야함
+
+
+
+
+
+
+
+
+
+
+
+섹션3
+밑에는 사용한툴 html css javascript  슬릭슬라이더를 사용했다
+섹션1 
+웰컴문구
+*/
